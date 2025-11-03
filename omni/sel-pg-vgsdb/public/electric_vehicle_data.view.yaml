@@ -1,0 +1,49 @@
+# Reference this view as electric_vehicle_data
+schema: public
+
+dimensions:
+  vin_prefix: {}
+  county: {}
+  city: {}
+  state: {}
+  postal_code: {}
+  model_year: {}
+  make: {}
+  model: {}
+  ev_type: {}
+  cafv_eligibility: {}
+  electric_range: {}
+  base_msrp: {}
+  legislative_district: {}
+  vehicle_location: {}
+  electric_utility: {}
+  census_tract_2020: {}
+
+  dol_vehicle_id:
+    format: ID
+
+  latitude:
+    sql: SPLIT_PART(REPLACE(REPLACE("vehicle_location", 'POINT (', ''), ')', ''), '
+      ', 2) AS FLOAT
+    label: latitude
+
+  longitude:
+    sql: SPLIT_PART(REPLACE(REPLACE("vehicle_location", 'POINT (', ''), ')', ''), '
+      ', 1) AS FLOAT
+    label: longitude
+
+measures:
+  count:
+    aggregate_type: count
+
+  electric_range_average:
+    sql: ${electric_vehicle_data.electric_range}
+    aggregate_type: average
+
+  total_unique_models:
+    sql: COUNT(DISTINCT model)
+    label: Total Unique Models
+
+  make_count_distinct:
+    sql: ${electric_vehicle_data.make}
+    aggregate_type: count_distinct
