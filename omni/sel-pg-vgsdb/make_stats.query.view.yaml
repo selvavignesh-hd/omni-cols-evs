@@ -1,0 +1,22 @@
+# Reference this view as make_stats
+sql: |-
+  SELECT "electric_vehicle_data"."make", COUNT(*) AS "count", ROUND(COUNT(*) * 100.0 / (((SELECT COUNT(*)
+  FROM "electric_vehicle_data" AS "electric_vehicle_data"))), 1) AS "percentage"
+  FROM "electric_vehicle_data" AS "electric_vehicle_data"
+  GROUP BY "electric_vehicle_data"."make"
+  ORDER BY COUNT(*) DESC
+  LIMIT 1
+
+dimensions:
+  make: {}
+  count: {}
+  percentage: {}
+
+  top_make:
+    sql: make
+
+  top_make_count:
+    sql: count
+
+  top_make_percentage:
+    sql: percentage
