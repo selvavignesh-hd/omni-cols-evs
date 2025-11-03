@@ -47,3 +47,15 @@ measures:
   make_count_distinct:
     sql: ${electric_vehicle_data.make}
     aggregate_type: count_distinct
+
+  model_year_sum:
+    sql: ${electric_vehicle_data.model_year}
+    aggregate_type: sum
+
+  electric_range_median:
+    sql: ${electric_vehicle_data.electric_range}
+    aggregate_type: median
+
+  electric_range_min:
+    sql: ${electric_vehicle_data.electric_range}
+    aggregate_type: min
