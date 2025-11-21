@@ -1,0 +1,24 @@
+# Reference this view as public_anime_marts__fct_anime_ratings
+schema: public_anime_marts
+table_name: fct_anime_ratings
+
+dimensions:
+  score: {}
+  score_bucket: {}
+  ranked: {}
+  popularity_rank: {}
+  popularity_bucket: {}
+  members_count: {}
+  members_bucket: {}
+  favorites_count: {}
+  favorites_percentage: {}
+  quality_indicator: {}
+  episodes: {}
+  episode_count_bucket: {}
+
+  anime_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

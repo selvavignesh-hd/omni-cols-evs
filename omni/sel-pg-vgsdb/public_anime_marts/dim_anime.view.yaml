@@ -1,0 +1,37 @@
+# Reference this view as public_anime_marts__dim_anime
+schema: public_anime_marts
+table_name: dim_anime
+
+dimensions:
+  title: {}
+  description: {}
+  image_url: {}
+  anime_type: {}
+  source_material: {}
+  episodes: {}
+  episode_count_bucket: {}
+  airing_status: {}
+  premiered: {}
+  released_season: {}
+  released_year: {}
+  decade: {}
+  genres: {}
+  themes: {}
+  studios: {}
+  producers: {}
+  demographic: {}
+  duration: {}
+  content_rating: {}
+  source_url: {}
+  uploaded_date: {}
+  dbt_loaded_at: {}
+
+  anime_id:
+    format: ID
+
+  myanimelist_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

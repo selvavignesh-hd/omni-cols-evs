@@ -1,0 +1,22 @@
+# Reference this view as public_anime_marts__agg_anime_by_genre
+schema: public_anime_marts
+table_name: agg_anime_by_genre
+
+dimensions:
+  genre: {}
+  decade: {}
+  anime_count: {}
+  avg_score: {}
+  avg_members: {}
+  avg_favorites: {}
+  avg_popularity_rank: {}
+  total_members: {}
+  total_favorites: {}
+  min_score: {}
+  max_score: {}
+  best_popularity_rank: {}
+  worst_popularity_rank: {}
+
+measures:
+  count:
+    aggregate_type: count
