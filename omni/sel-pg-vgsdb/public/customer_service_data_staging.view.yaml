@@ -1,0 +1,32 @@
+# Reference this view as customer_service_data_staging
+schema: public
+
+dimensions:
+  channel_name: {}
+  category: {}
+  sub_category: {}
+  customer_remarks: {}
+  order_date_time: {}
+  issue_reported_at: {}
+  issue_responded: {}
+  customer_city: {}
+  product_category: {}
+  item_price: {}
+  connected_handling_time: {}
+  agent_name: {}
+  supervisor: {}
+  manager: {}
+  tenure_bucket: {}
+  agent_shift: {}
+  csat_score: {}
+
+  unique_id:
+    format: ID
+    primary_key: true
+
+  order_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

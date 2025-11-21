@@ -1,0 +1,40 @@
+# Reference this view as anime
+schema: public
+
+dimensions:
+  title: {}
+  description: {}
+  image_url: {}
+  type: {}
+  episodes: {}
+  status: {}
+  premiered: {}
+  released_season: {}
+  released_year: {}
+  source: {}
+  genres: {}
+  themes: {}
+  studios: {}
+  producers: {}
+  demographic: {}
+  duration: {}
+  rating: {}
+  score: {}
+  ranked: {}
+  popularity: {}
+  members: {}
+  favorites: {}
+  characters: {}
+  uploaded_date: {}
+  source_url: {}
+
+  id:
+    format: ID
+    primary_key: true
+
+  myanimelist_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

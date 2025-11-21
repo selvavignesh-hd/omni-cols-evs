@@ -1,0 +1,23 @@
+# Reference this view as netflix_titles
+schema: public
+
+dimensions:
+  type: {}
+  title: {}
+  director: {}
+  casts: {}
+  country: {}
+  date_added: {}
+  release_year: {}
+  rating: {}
+  duration: {}
+  listed_in: {}
+  description: {}
+
+  show_id:
+    format: ID
+    primary_key: true
+
+measures:
+  count:
+    aggregate_type: count

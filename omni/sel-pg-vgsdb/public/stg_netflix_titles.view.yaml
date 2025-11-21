@@ -1,0 +1,25 @@
+# Reference this view as stg_netflix_titles
+schema: public
+
+dimensions:
+  type: {}
+  title: {}
+  director: {}
+  casts: {}
+  country: {}
+  date_added: {}
+  release_year: {}
+  rating: {}
+  duration: {}
+  genres: {}
+  description: {}
+  movie_duration_minutes: {}
+  tv_show_seasons: {}
+  date_added_parsed: {}
+
+  show_id:
+    format: ID
+
+measures:
+  count:
+    aggregate_type: count

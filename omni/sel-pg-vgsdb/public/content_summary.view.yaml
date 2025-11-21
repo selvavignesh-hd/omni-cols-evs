@@ -1,0 +1,10 @@
+# Reference this view as content_summary
+schema: public
+
+dimensions:
+  metric: {}
+  value: {}
+
+measures:
+  count:
+    aggregate_type: count
