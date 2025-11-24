@@ -17,6 +17,20 @@ dimensions:
   best_popularity_rank: {}
   worst_popularity_rank: {}
 
+  genre_groups:
+    sql: ${public_anime_marts__agg_anime_by_genre.genre}
+    groups: []
+    else: Other
+    label: Genre Groups
+
 measures:
   count:
     aggregate_type: count
+
+  anime_count_sum:
+    sql: ${public_anime_marts__agg_anime_by_genre.anime_count}
+    aggregate_type: sum
+
+  genre_count_distinct:
+    sql: ${public_anime_marts__agg_anime_by_genre.genre}
+    aggregate_type: count_distinct

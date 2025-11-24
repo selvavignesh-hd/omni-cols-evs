@@ -35,3 +35,12 @@ dimensions:
 measures:
   count:
     aggregate_type: count
+
+  anime_id_sum:
+    sql: ${public_anime_marts__dim_anime.anime_id}
+    format: ID
+    aggregate_type: sum
+
+  anime_id_count_distinct:
+    sql: ${public_anime_marts__dim_anime.anime_id}
+    aggregate_type: count_distinct

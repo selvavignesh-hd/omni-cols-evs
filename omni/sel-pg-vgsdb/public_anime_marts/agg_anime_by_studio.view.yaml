@@ -20,3 +20,11 @@ dimensions:
 measures:
   count:
     aggregate_type: count
+
+  avg_score_average:
+    sql: ${public_anime_marts__agg_anime_by_studio.avg_score}
+    aggregate_type: average
+
+  anime_count_sum:
+    sql: ${public_anime_marts__agg_anime_by_studio.anime_count}
+    aggregate_type: sum

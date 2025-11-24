@@ -22,3 +22,7 @@ dimensions:
 measures:
   count:
     aggregate_type: count
+
+  anime_id_count_distinct:
+    sql: ${public_anime_marts__fct_anime_ratings.anime_id}
+    aggregate_type: count_distinct
