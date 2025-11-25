@@ -1,5 +1,7 @@
 base_view: public_anime_marts__fct_anime_ratings
 label: Topic Public Anime Marts Fct Anime Ratings
 
+fields: [ all_views.*, -anime.ranked ]
+
 joins:
   anime: {}
