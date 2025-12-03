@@ -1,0 +1,5 @@
+base_view: public_anime_marts__dim_anime
+label: Public Anime Marts Dim Anime Copy
+
+joins:
+  public_anime_marts__fct_anime_ratings: {}

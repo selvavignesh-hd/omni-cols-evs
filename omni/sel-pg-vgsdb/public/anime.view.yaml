@@ -38,3 +38,7 @@ dimensions:
 measures:
   count:
     aggregate_type: count
+
+  id_count_distinct:
+    sql: ${anime.id}
+    aggregate_type: count_distinct

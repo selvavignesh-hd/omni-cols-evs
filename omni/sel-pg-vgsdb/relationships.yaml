@@ -3,7 +3,7 @@
   join_type: always_left
   on_sql: ${public_anime_marts__dim_anime.anime_id} =
     ${public_anime_marts__fct_anime_ratings.anime_id}
-  reversible: false
+  relationship_type: one_to_one
 
 - join_from_view: public_anime_marts__fct_anime_ratings
   join_to_view: anime
