@@ -1,4 +1,88 @@
 # Reference this view as customer_support_data
+uploaded_table_name: Customer_support_data.csv::ec6b9800-8bb4-4aad-ac26-807a6a1c6675
+
+dimensions:
+  unique_id:
+    sql: '"Unique id"'
+    display_order: 0
+
+  channel_name:
+    display_order: 1
+
+  category:
+    display_order: 2
+
+  sub_category:
+    sql: '"Sub-category"'
+    display_order: 3
+
+  customer_remarks:
+    sql: '"Customer Remarks"'
+    display_order: 4
+
+  order_id:
+    sql: '"Order_id"'
+    display_order: 5
+
+  order_date_time:
+    display_order: 6
+
+  issue_reported_at:
+    sql: '"Issue_reported at"'
+    display_order: 7
+
+  issue_responded:
+    display_order: 8
+
+  survey_response_date:
+    sql: '"Survey_response_Date"'
+    display_order: 9
+
+  customer_city:
+    sql: '"Customer_City"'
+    display_order: 10
+
+  product_category:
+    sql: '"Product_category"'
+    display_order: 11
+
+  item_price:
+    sql: '"Item_price"'
+    display_order: 12
+
+  connected_handling_time:
+    display_order: 13
+
+  agent_name:
+    sql: '"Agent_name"'
+    display_order: 14
+
+  supervisor:
+    sql: '"Supervisor"'
+    display_order: 15
+
+  manager:
+    sql: '"Manager"'
+    display_order: 16
+
+  tenure_bucket:
+    sql: '"Tenure Bucket"'
+    display_order: 17
+
+  agent_shift:
+    sql: '"Agent Shift"'
+    display_order: 18
+
+  csat_score:
+    sql: '"CSAT Score"'
+    display_order: 19
+
+  category_groups:
+    sql: ${customer_support_data.category}
+    groups: []
+    else: Other
+    label: Category Groups
+
 measures:
   count:
     aggregate_type: count
