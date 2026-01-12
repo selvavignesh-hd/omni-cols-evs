@@ -11,16 +11,13 @@ dimensions:
   make: {}
   model: {}
   ev_type: {}
+  cafv_eligibility: {}
   electric_range: {}
   base_msrp: {}
   legislative_district: {}
   vehicle_location: {}
   electric_utility: {}
   census_tract_2020: {}
-
-  cafv_eligibility:
-    sql: cafv_eligibility
-    label: Cafv Eligibility - Label changed
 
   dol_vehicle_id:
     format: ID
